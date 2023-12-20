@@ -5,6 +5,8 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/features", glue = {"com/cucumber/StepDefinitions"},monochrome = true)
+@CucumberOptions(features = "src/test/resources/features",
+        tags = "@FirstTest",
+        glue = {"com/cucumber/StepDefinitions"},monochrome = true)
 public class loginRunner{
 }
