@@ -1,3 +1,5 @@
+@FirstTest
+
 Feature: Para Bank
   As a user, I should be able to login using username and password
 

@@ -1,5 +1,6 @@
 package com.cucumber.StepDefinitions;
 
+import com.utilities.driverSetup;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -9,15 +10,16 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.IOException;
+
 public class loginStep {
     private WebDriver driver;
+    driverSetup driversetup;
 
     @Given("^I am on homepage$")
-    public void i_am_on_homepage() throws InterruptedException {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.get("https://parabank.parasoft.com/parabank/index.htm");
-        driver.manage().window().maximize();
+    public void i_am_on_homepage() throws InterruptedException,IOException {
+        driversetup = new driverSetup();
+        driver  = driversetup.getBrowser();
         Thread.sleep(2000);
     }
 
