@@ -7,7 +7,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -50,7 +49,8 @@ public class driverSetup {
                 break;
         }
         driver.manage().window().maximize();
-        driver.get("https://parabank.parasoft.com/parabank/index.htm");
+        String url = (String) prop.get("url");
+        driver.get(url);
         return driver;
     }
 
