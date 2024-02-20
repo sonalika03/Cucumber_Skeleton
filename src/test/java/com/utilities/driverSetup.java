@@ -42,7 +42,7 @@ public class driverSetup {
                 driver = new InternetExplorerDriver();
                 break;
             default:
-                System.out.println("The Browser is doesnot exists in the stack.....");
+                System.out.println("The Browser doesnot exists in the stack.....");
                 System.out.println("By default proceeding with the Chrome Browser");
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
