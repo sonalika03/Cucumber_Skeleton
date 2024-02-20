@@ -6,12 +6,8 @@ Feature: Para Bank
   Background:
     Given I am on homepage
 
-  Scenario Outline: Sign up by giving the personal information
+  Scenario: Sign up by giving the personal information
     Given I should be on homepage
     When I click on the register and should be navigated to registration page
-    When I enter the firstname <firstname> lastname <lastname> address <address> city <city> state <state> zipcode <zipcode> phone <phone> ssn <ssn>
-    When I enter the username <username> password <password> and confirm password <confirm password> and click on register
-
-    Examples:
-      | firstname | lastname | address      | city   | state  | zipcode | phone      | ssn | username | password     | confirm password |
-      | samuel    | john     | cross street | bodhan | kerala | 578935  | 9876543210 | 556 | test1234 | test1234@123 | test1234@123     |
+    When I enter the firstname lastname address city state zipcode phone ssn
+    When I enter the username password and confirm password and click on register

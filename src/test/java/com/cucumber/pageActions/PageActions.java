@@ -2,20 +2,24 @@ package com.cucumber.pageActions;
 
 import com.cucumber.Pages.loginPage;
 import com.utilities.driverSetup;
+import com.utilities.txtReader;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class PageActions {
     WebDriver driver;
     driverSetup driversetup;
+
+    txtReader txtreader;
     public void pageActions() throws IOException, InterruptedException {
         driversetup = new driverSetup();
         driver  = driversetup.getBrowser();
         Thread.sleep(2000);
+
     }
-    public void getTitle(){
+    public void getTitle() throws FileNotFoundException {
         String title = driver.getTitle();
         System.out.println(title);
     }
