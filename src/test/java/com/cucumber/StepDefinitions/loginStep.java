@@ -1,19 +1,24 @@
 package com.cucumber.StepDefinitions;
 
+import com.utilities.excelReader;
 import com.utilities.txtReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import com.cucumber.pageActions.*;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class loginStep {
     PageActions actions= new PageActions();
     txtReader pass = new txtReader("Data.txt");
-    HashMap<String, String> examples = pass.getDataInMap();
+    HashMap<String, String> examples2 = pass.getDataInMap();
+    excelReader passfromExcel = new excelReader("ExcelData.xlsx");
+    HashMap<String, String> examples = passfromExcel.getDataTable("Sheet1","TC1");
 
-    public loginStep(){
+
+    public loginStep() throws IOException {
     }
 
     @Given("^I am on homepage$")
