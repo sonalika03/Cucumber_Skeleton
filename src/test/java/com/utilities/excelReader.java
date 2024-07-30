@@ -4,34 +4,40 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 
 public class excelReader {
-    String Projectpath = System.getProperty("user.dir")+"/src/test/resources/Properties/";
+    String Projectpath = System.getProperty("user.dir") + "/src/test/resources/Properties/";
     String Path;
-    ArrayList<String> line = new ArrayList<>();
-    ArrayList<String> header = new ArrayList<>();
-    ArrayList<String> footer = new ArrayList<>();
+    LinkedList<String> header = new LinkedList<>();
+    LinkedList<String> footer = new LinkedList<>();
     XSSFWorkbook excel;
     XSSFSheet sheet;
     DataFormatter df = new DataFormatter();
+
     public excelReader(String excelName) throws IOException {
-        Path = Projectpath+excelName;
+        Path = Projectpath + excelName;
         this.Projectpath = Path;
-        excel = new XSSFWorkbook(Projectpath);
+//        FileInputStream fis = new FileInputStream(Projectpath);
+        excel = new XSSFWorkbook(new FileInputStream(Projectpath));
 
     }
-    public HashMap getDataTable(String sheetName, String testCaseID) throws IOException {
-        return setDatainMap(sheetName,getRowNum(sheetName, testCaseID));
+
+    public LinkedHashMap getDataTable(String sheetName, String testCaseID) throws IOException {
+        return setDatainMap(sheetName, getRowNum(sheetName, testCaseID));
 
     }
-    public int getRowNum(String sheetName, String testCaseID){
+
+    public int getRowNum(String sheetName, String testCaseID) {
         XSSFSheet sheet = excel.getSheet(sheetName);
         int rowNum = -1;
         for (Row row : sheet) {
@@ -40,58 +46,92 @@ public class excelReader {
                     rowNum = row.getRowNum();
                 }
             }
-        }return rowNum;
+        }
+        return rowNum;
     }
 
     public int getColumnNum(String sheetName, String columnName) throws IOException {
-        ArrayList<String> columns = getHeaders(sheetName);
-        int columnNum =0;
-        for (int i=0;i<columns.size();i++){
-        if(columns.get(i).equalsIgnoreCase(columnName)){
-            columnNum =i;
+        LinkedList<String> columns = getHeaders(sheetName);
+        int columnNum = 0;
+        for (int i = 0; i < columns.size(); i++) {
+            if (columns.get(i).equalsIgnoreCase(columnName)) {
+                columnNum = i;
+            }
         }
-        }return columnNum;
-        }
+        return columnNum;
+    }
 
-    public ArrayList getRowData(String sheetName, String testCaseID) throws IOException {
-        ArrayList footers = getFooters(getRowNum(sheetName,testCaseID),sheetName);
+    public LinkedList getRowData(String sheetName, String testCaseID) throws IOException {
+        LinkedList footers = getFooters(getRowNum(sheetName, testCaseID), sheetName);
         System.out.println(footers);
         return footers;
-        }
+    }
 
-    private HashMap setDatainMap(String sheetName, int row) throws IOException {
-        HashMap<String, String> map = new HashMap<>();
-        getHeaders(sheetName);
-        getFooters(row,sheetName);
-        for (int i=0;i<header.size();i++){
-            map.put(header.get(i),footer.get(i));
+    private LinkedHashMap setDatainMap(String sheetName, int row) throws IOException {
+        LinkedHashMap<String, String> map = new LinkedHashMap<>();
+        LinkedList<String> headers = getHeaders(sheetName);
+        LinkedList<String> footers = getFooters(row, sheetName);
+        for (int i = 0; i < headers.size(); i++) {
+            try {
+                map.put(headers.get(i), footers.get(i));
+            } catch (Exception e) {
+                System.out.println("OutofBound");
+            }
         }
         System.out.println(map);
 
-    return map;
+        return map;
     }
-    public ArrayList getHeaders(String sheetName) throws IOException {
-        XSSFSheet sheet = excel.getSheet(sheetName);
-            XSSFRow row = sheet.getRow(0);
-            for (Cell cell :row)
-                header.add(String.valueOf(cell));
-            return header;
-        }
 
-    public ArrayList getFooters(int rowNum, String sheetName) throws IOException {
+    public LinkedList<String> getHeaders(String sheetName) throws IOException {
+        XSSFSheet sheet = excel.getSheet(sheetName);
+        XSSFRow row = sheet.getRow(0);
+        for (Cell cell : row)
+            header.add(String.valueOf(cell));
+        return header;
+    }
+
+    public LinkedList getFooters(int rowNum, String sheetName) throws IOException {
         XSSFSheet sheet = excel.getSheet(sheetName);
         XSSFRow row = sheet.getRow(rowNum);
-        for (Cell cell : row){
-            if (cell.getCellType()== CellType.NUMERIC)
+        for (Cell cell : row) {
+            if (cell.getCellType() == CellType.NUMERIC)
                 footer.add(df.formatCellValue(cell));
             else
                 footer.add(String.valueOf(cell));
-        }return footer;
+        }
+        return footer;
 
+    }
+
+    public void setDataToExistingExcel(String sheetName, String testCaseID) throws IOException {
+        XSSFSheet sheet = excel.getSheet(sheetName);
+        int columnNum = getColumnNum(sheetName, "Status");
+        for (int i = 1; i < sheet.getLastRowNum(); i++) {
+            XSSFRow row = sheet.getRow(i);
+            Cell cell = row.createCell(columnNum);
+            cell.setCellValue("pass");
+            FileOutputStream fos = new FileOutputStream(Path);
+            excel.write(fos);
+            fos.close();
+        }
+
+//        }
+//        getColumnNum(sheetName, "Status");
+//        getRowNum(sheetName, testCaseID);
+//
+//        System.out.println(setDataInMap);
+
+//
     }
 
     public static void main(String args[]) throws IOException {
-        excelReader getExcel = new excelReader("ExcelData.xlsx");
-        getExcel.getRowData("Sheet1","TC2");
-                }
+        excelReader getExcel = new excelReader("ExcelWrite.xlsx");
+        getExcel.setDataToExistingExcel("Sheet1","TC1");
+
+
     }
+}
+
+
+

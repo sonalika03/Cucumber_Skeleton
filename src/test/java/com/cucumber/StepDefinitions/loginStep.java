@@ -2,6 +2,7 @@ package com.cucumber.StepDefinitions;
 
 import com.utilities.excelReader;
 import com.utilities.txtReader;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import com.cucumber.pageActions.*;
@@ -32,7 +33,7 @@ public class loginStep {
     }
 
     @When("I click on the register and should be navigated to registration page")
-    public void i_click_on_the_register_and_should_be_navigated_to_registration_page() {
+    public void i_click_on_the_register_and_should_be_navigated_to_registration_page(DataTable db) {
         actions.register();
     }
 
