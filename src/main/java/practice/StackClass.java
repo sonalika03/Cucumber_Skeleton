@@ -1,4 +1,4 @@
-package com.cucumber.StepDefinitions;
+package practice;
 
 import java.util.*;
 

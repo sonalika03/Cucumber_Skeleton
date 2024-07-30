@@ -1,0 +1,2 @@
+|firstname|lastname|address|city|state|zipcode|phone|ssn|username|password|confirmpassword|
+|samuel|john|crossstreet|bodhan|kerala|578935|9876543210|556|test1234|test1234@123|test1234@123|
