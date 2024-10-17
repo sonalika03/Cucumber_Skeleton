@@ -5,19 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c588dc20-3727-413b-a4fd-255d56436ad1" name="Changes" comment="Pushing excelUtility">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/utilities/ExecuteClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/utilities/Locators.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/utilities/RobotClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/utilities/alertsAndActions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/utilities/checkBoxes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/utilities/multipleTabsWindows.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/utilities/selectClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/seleniumUtilities/driverSetup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/seleniumUtilities/excelConcepts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/testngUtilities/testngImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/StepDefinitions/ArrayListClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/practice/ArrayListClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/StepDefinitions/StackClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/practice/StackClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/StepDefinitions/loginStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/StepDefinitions/loginStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/utilities/excelReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/utilities/excelReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Properties/ExcelData.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/pageActions/PageActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/pageActions/PageActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/utilities/ExecuteClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/seleniumUtilities/ExecuteClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/utilities/Locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/seleniumUtilities/Locators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/utilities/RobotClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/seleniumUtilities/RobotClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/utilities/alertsAndActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/seleniumUtilities/AlertsAndActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/utilities/checkBoxes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/seleniumUtilities/checkBoxes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/utilities/driverSetup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/utilities/excelReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/seleniumUtilities/excelReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/utilities/excelUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/seleniumUtilities/excelUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/utilities/iFrames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/seleniumUtilities/iFrames.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/utilities/multipleTabsWindows.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/seleniumUtilities/multipleTabsWindows.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/utilities/selectClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/seleniumUtilities/selectClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/utilities/txtReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/seleniumUtilities/txtReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/practice/ArrayListClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/practice/StackClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Properties/Data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Properties/ExcelRead.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Properties/ExcelUtility.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Properties/ExcelWrite.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Properties/ExcelReader.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Properties/Global.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cucumber/Pages/loginPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cucumber/Runners/loginRunner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cucumber/StepDefinitions/loginStep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cucumber/pageActions/PageActions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/utilities/ExecuteClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/utilities/Locators.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/utilities/RobotClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/utilities/alertsAndActions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/utilities/checkBoxes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/utilities/driverSetup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/utilities/excelReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/utilities/excelUtility.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/utilities/iFrames.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/utilities/multipleTabsWindows.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/utilities/selectClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/utilities/txtReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/login.feature" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +58,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="XML Properties File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -57,13 +90,19 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/2078007/OneDrive - Cognizant/Documents/Automation Scipts/CloudAnchor-TestAutomationScripts&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/2078007/Downloads/CloudAssuranceStudio_RestAssuredTestNg-master (2)/CloudAssuranceStudio_RestAssuredTestNg-master&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.selectClass">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\2078007\OneDrive - Cognizant\Desktop\New folder (9)\Cucumber_Skeleton\src\test\resources\Properties" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.JavaBasics">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -94,12 +133,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExecuteClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.utilities.ExecuteClass" />
+    <configuration name="AlertsAndActions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.seleniumUtilities.AlertsAndActions" />
       <module name="Framework_POM" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.utilities.*" />
+          <option name="PATTERN" value="com.seleniumUtilities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,12 +146,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="checkBoxes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.utilities.checkBoxes" />
+    <configuration name="ChildClassInherit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.javaUtilities.ChildClassInherit" />
       <module name="Framework_POM" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.utilities.*" />
+          <option name="PATTERN" value="com.javaUtilities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,12 +159,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="excelUtility" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.utilities.excelUtility" />
+    <configuration name="Collections" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.javaUtilities.Collections" />
       <module name="Framework_POM" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.utilities.*" />
+          <option name="PATTERN" value="com.javaUtilities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,12 +172,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="multipleTabsWindows" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.utilities.multipleTabsWindows" />
+    <configuration name="JavaBasics" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.javaUtilities.JavaBasics" />
       <module name="Framework_POM" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.utilities.*" />
+          <option name="PATTERN" value="com.javaUtilities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -146,12 +185,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="selectClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.utilities.selectClass" />
+    <configuration name="Shreya" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.seleniumUtilities.Shreya" />
       <module name="Framework_POM" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.utilities.*" />
+          <option name="PATTERN" value="com.javaUtilities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -170,13 +209,57 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="C:/Users/2078007/OneDrive - Cognizant/Desktop/New folder (9)/Cucumber_Skeleton/src/test/resources/Properties/testng.xml" type="TestNG" nameIsGenerated="true">
+      <module name="Framework_POM" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/Properties/testng.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Properties" type="TestNG" nameIsGenerated="true">
+      <module name="Framework_POM" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Properties.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="Properties" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.selectClass" />
-        <item itemvalue="Application.multipleTabsWindows" />
-        <item itemvalue="Application.ExecuteClass" />
-        <item itemvalue="Application.checkBoxes" />
-        <item itemvalue="Application.excelUtility" />
+        <item itemvalue="Application.JavaBasics" />
+        <item itemvalue="Application.Collections" />
+        <item itemvalue="Application.AlertsAndActions" />
+        <item itemvalue="Application.Shreya" />
+        <item itemvalue="Application.ChildClassInherit" />
       </list>
     </recent_temporary>
   </component>
@@ -221,17 +304,12 @@
           <properties class="java.lang.NoSuchMethodError" package="java.lang" />
           <option name="timeStamp" value="6" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/utilities/multipleTabsWindows.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/utilities/multipleTabsWindows.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Cucumber_Skeleton$testngImplementation.ic" NAME="testngImplementation Coverage Results" MODIFIED="1723111206915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.utilities.*</FILTER>
+    </SUITE>
   </component>
 </project>
