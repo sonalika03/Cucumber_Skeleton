@@ -16,5 +16,10 @@
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="99ecd222-570c-4654-84d6-3867dce6059b" />
+      <option name="name" value="99ecd222-570c-4654-84d6-3867dce6059b" />
+      <option name="url" value="https://mvnrepository.com/artifact/org.testng/testng" />
+    </remote-repository>
   </component>
 </project>
